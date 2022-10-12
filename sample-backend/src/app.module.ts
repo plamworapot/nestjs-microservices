@@ -11,7 +11,7 @@ import { AppService } from './app.service';
         transport: Transport.TCP,
         options: { 
           host: 'local-nest-communication', 
-          port: 3021,
+          port: 3011,
          },
       },
       {
@@ -19,7 +19,7 @@ import { AppService } from './app.service';
         transport: Transport.TCP,
         options: { 
           host: 'local-nest-analytics',
-          port: 3022,
+          port: 3012,
          },
       },
     ]),

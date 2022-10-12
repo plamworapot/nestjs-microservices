@@ -5,7 +5,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 3030
+  - port: 3000
     targetPort: 3000
   selector:
     name: local-nest-backend

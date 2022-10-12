@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: local-nest-analytics
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       name: local-nest-analytics
@@ -17,7 +17,5 @@ spec:
         image: local-nest-analytics
         imagePullPolicy: IfNotPresent
         ports:
-          - containerPort: 3000
-            name: http
           - containerPort: 3010
             name: tcp

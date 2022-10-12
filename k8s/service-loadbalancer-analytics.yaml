@@ -5,8 +5,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 3022
-    name: tcp
+  - port: 3012
     targetPort: 3010
     protocol: TCP
   selector:
