@@ -10,7 +10,7 @@ import { AppService } from './app.service';
         name: 'COMMUNICATION',
         transport: Transport.TCP,
         options: { 
-          host: 'host.docker.internal',
+          host: 'local-nest-communication', 
           port: 3021,
          },
       },
@@ -18,7 +18,7 @@ import { AppService } from './app.service';
         name: 'ANALYTICS',
         transport: Transport.TCP,
         options: { 
-          host: 'localhost',
+          host: 'local-nest-analytics',
           port: 3022,
          },
       },
