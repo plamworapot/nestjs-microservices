@@ -9,11 +9,18 @@ import { AppService } from './app.service';
       {
         name: 'COMMUNICATION',
         transport: Transport.TCP,
+        options: { 
+          host: 'local-nest-communication', 
+          port: 3021,
+         },
       },
       {
         name: 'ANALYTICS',
         transport: Transport.TCP,
-        options: { port: 3001 },
+        options: { 
+          host: 'local-nest-analytics',
+          port: 3022,
+         },
       },
     ]),
   ],
