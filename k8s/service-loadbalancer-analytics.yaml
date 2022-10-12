@@ -9,8 +9,5 @@ spec:
     name: tcp
     targetPort: 3010
     protocol: TCP
-  - port: 3040
-    name: http
-    targetPort: 3000
   selector:
     name: local-nest-analytics
