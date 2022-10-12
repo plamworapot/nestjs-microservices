@@ -18,9 +18,8 @@ export class AppService {
 
   createUser(createUserRequest: CreateUserRequest) {
     this.users.push(createUserRequest);
-    this.communicationClient.emit(
-      'user_created',
-      new CreateUserEvent(createUserRequest.email),
+    this.communicationClient.send(
+      { cmd: 'user_created' },{}
     );
     this.analyticsClient.emit(
       'user_created',

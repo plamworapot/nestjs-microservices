@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local-nest-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: local-nest-backend
+  template:
+    metadata:
+      labels:
+        name: local-nest-backend
+    spec:
+      containers:
+      - name: app
+        image: local-nest-backend
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 3000

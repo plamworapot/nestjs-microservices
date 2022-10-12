@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local-nest-communication
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: local-nest-communication
+  template:
+    metadata:
+      labels:
+        name: local-nest-communication
+    spec:
+      containers:
+      - name: app
+        image: local-nest-communication
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 3000
+            name: http
+          - containerPort: 3010
+            name: tcp

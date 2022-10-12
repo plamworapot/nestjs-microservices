@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: local-nest-backend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3030
+    targetPort: 3000
+  selector:
+    name: local-nest-backend
